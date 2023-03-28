@@ -16,6 +16,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+# Imports desde Views
+from webapp.views import *
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    #Manera automatica path('', bienvenido)
+    #Manera manual path('bienvenido/', bienvenido)
+
+    path('', bienvenido),
+    path('despedida', despedirse),
+    path('contacto', contacto)
+
 ]
