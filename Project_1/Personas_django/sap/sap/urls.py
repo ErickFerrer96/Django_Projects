@@ -24,8 +24,8 @@ urlpatterns = [
 
     #Manera automatica path('', bienvenido)
     #Manera manual path('bienvenido/', bienvenido)
-
     path('', bienvenido),
+    path('admin/', admin.site.urls),
     path('despedida', despedirse),
     path('contacto', contacto)
 
