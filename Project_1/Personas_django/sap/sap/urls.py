@@ -16,17 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+
 # Imports desde Views
 from webapp.views import *
+from personas.views import detallePersona
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
 
-    #Manera automatica path('', bienvenido)
-    #Manera manual path('bienvenido/', bienvenido)
     path('', bienvenido),
-    path('admin/', admin.site.urls),
-    path('despedida', despedirse),
-    path('contacto', contacto)
+    path('detalle_persona/<int:id>', detallePersona),
+    path('admin/', admin.site.urls)
 
 ]
