@@ -19,12 +19,16 @@ from django.urls import path
 
 # Imports desde Views
 from webapp.views import *
-from personas.views import detallePersona
+from personas.views import detallePersona, nuevaPersona, editarPersona, eliminarPersona
 
 urlpatterns = [
 
-    path('', bienvenido),
+    path('', bienvenido, name='inicio'),
     path('detalle_persona/<int:id>', detallePersona),
-    path('admin/', admin.site.urls)
+    path('nueva_persona', nuevaPersona),
+    path('admin/', admin.site.urls),
+    path('editar_persona/<int:id>', editarPersona),
+    path('eliminar_persona/<int:id>', eliminarPersona)
+
 
 ]
